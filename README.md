@@ -1,15 +1,13 @@
 ## CODE I USED 
+
+
+
 import streamlit as st
 import joblib
-
-# ----------------------------
-# PAGE CONFIG
-# ----------------------------
+ PAGE CONFIG
 st.set_page_config(page_title="Fake News Detector", page_icon="📰", layout="centered")
 
-# ----------------------------
-# CUSTOM CSS (FULL + FIXED)
-# ----------------------------
+ CUSTOM CSS (FULL + FIXED)
 st.markdown("""
 <style>
 
