@@ -1,13 +1,21 @@
-## CODE I USED 
+---
 
+## 🧩 Code Used (app.py)
 
+Below is the complete Streamlit application code with custom futuristic UI, animated background, neon effects, and glitch styling.
 
+```python
 import streamlit as st
 import joblib
- PAGE CONFIG
+
+# ----------------------------
+# PAGE CONFIG
+# ----------------------------
 st.set_page_config(page_title="Fake News Detector", page_icon="📰", layout="centered")
 
- CUSTOM CSS (FULL + FIXED)
+# ----------------------------
+# CUSTOM CSS (FULL + FIXED)
+# ----------------------------
 st.markdown("""
 <style>
 
@@ -44,7 +52,7 @@ st.markdown("""
        TITLE CONTAINER (NO COLLISION)
     ------------------------------ */
     .main-title-container {
-        margin-top: 80px !important;  /* FIXES collision */
+        margin-top: 80px !important;
         position: relative;
         display: flex;
         justify-content: center;
@@ -67,40 +75,22 @@ st.markdown("""
         background: rgba(0,255,180,0.8);
         box-shadow: 0 0 10px #00ffcc;
         animation: scanline 3s linear infinite;
-        margin-top: 30px;  /* prevents overlap */
+        margin-top: 30px;
     }
 
     /* ------------------------------
        PURPLE GLITCH EFFECT
     ------------------------------ */
     @keyframes glitchPurple {
-        0% { 
-            clip-path: inset(0 0 0 0);
-            text-shadow: 0 0 12px #c77dff;
-        }
-        25% { 
-            clip-path: inset(5px 0 25px 0); 
-            transform: skew(1deg);
-            text-shadow: 0 0 22px #d157ff;
-        }
-        50% { 
-            clip-path: inset(12px 0 8px 0); 
-            transform: skew(-1deg);
-            text-shadow: 0 0 30px #f28dff;
-        }
-        75% { 
-            clip-path: inset(3px 0 30px 0); 
-            transform: skew(0.8deg);
-            text-shadow: 0 0 18px #c77dff;
-        }
-        100% { 
-            clip-path: inset(0 0 0 0);
-            text-shadow: 0 0 12px #c77dff;
-        }
+        0% { clip-path: inset(0 0 0 0); text-shadow: 0 0 12px #c77dff; }
+        25% { clip-path: inset(5px 0 25px 0); transform: skew(1deg); text-shadow: 0 0 22px #d157ff; }
+        50% { clip-path: inset(12px 0 8px 0); transform: skew(-1deg); text-shadow: 0 0 30px #f28dff; }
+        75% { clip-path: inset(3px 0 30px 0); transform: skew(0.8deg); text-shadow: 0 0 18px #c77dff; }
+        100% { clip-path: inset(0 0 0 0); text-shadow: 0 0 12px #c77dff; }
     }
 
     /* ------------------------------
-       FUTURISTIC BOXY TITLE PANEL
+       FUTURISTIC TITLE PANEL
     ------------------------------ */
     .main-title {
         padding: 22px 40px;
@@ -126,15 +116,9 @@ st.markdown("""
     }
 
     @keyframes neonBreath {
-        0% {
-            box-shadow: 0 0 15px #00ff9d, 0 0 25px #00ff9d, inset 0 0 10px #00ff9d;
-        }
-        50% {
-            box-shadow: 0 0 35px #00ff9d, 0 0 60px #00ff9d, inset 0 0 25px #00ff9d;
-        }
-        100% {
-            box-shadow: 0 0 15px #00ff9d, 0 0 25px #00ff9d, inset 0 0 10px #00ff9d;
-        }
+        0%   { box-shadow: 0 0 15px #00ff9d, 0 0 25px #00ff9d, inset 0 0 10px #00ff9d; }
+        50%  { box-shadow: 0 0 35px #00ff9d, 0 0 60px #00ff9d, inset 0 0 25px #00ff9d; }
+        100% { box-shadow: 0 0 15px #00ff9d, 0 0 25px #00ff9d, inset 0 0 10px #00ff9d; }
     }
 
     /* ------------------------------
@@ -144,14 +128,11 @@ st.markdown("""
         color: white !important;
         font-size: 22px !important;
         font-weight: 700 !important;
-        text-shadow:
-            0 0 15px #66ccff,
-            0 0 25px #66ccff,
-            0 0 40px #66ccff;
+        text-shadow: 0 0 15px #66ccff, 0 0 25px #66ccff, 0 0 40px #66ccff;
     }
 
     /* ------------------------------
-       FLOATING CAR-STYLE INPUT BOX
+       FLOATING INPUT BOX
     ------------------------------ */
     @keyframes floatBox {
         0% { transform: translateY(0px); }
@@ -187,7 +168,7 @@ st.markdown("""
     }
 
     /* ------------------------------
-       BUTTON
+       BUTTON STYLE
     ------------------------------ */
     .stButton button {
         background-color: black !important;
@@ -241,8 +222,11 @@ if st.button("Check"):
             st.error("🚨 This news is **FAKE**!")
         else:
             st.success("✔ This news is **REAL**!")
+```
 
 ---
+
+--------
 
 ## 🚀 Project Overview
 
