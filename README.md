@@ -227,6 +227,10 @@ if st.button("Check"):
 ---
 
 --------
+## 🚀 Live Demo  
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://false-news-detector-fr37pyrfdcpxgwxpyqxttg.streamlit.app/)
+
+
 
 ## 🚀 Project Overview
 
